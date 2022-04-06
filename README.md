@@ -86,9 +86,11 @@ Following the recommended computational procedure, a total number of 123 conform
 The input excel file required for running the ML_JDP4.py script must be filled as follows. The Excel file is also provided in the folder *“menthol_ML_dJ-DP4”*.
 
 **J sheet**
+
 ![Jdir (2)](https://user-images.githubusercontent.com/101182775/162086472-805f9ef1-9cef-4d5a-bfa2-c8a845079120.png)
 
 **Shifts sheet**
+
 ![shiftdir (2)](https://user-images.githubusercontent.com/101182775/162086515-73a528da-4508-4e2c-8f1e-5aa3b566befe.png)
 
 Once installed, the script is run through the console as `ml_jdp4`. A pop-up window is opened, requesting to select the directory in which the Gaussian output files and the Excel input file are located. Once the folder is selected, a new pop-up window is opened requesting to select the Excel input file with the experimental data and labels. Once the script is run, the resulting excel report file **“Results_ML_J_DP4”** will be generated. The output Excel file is provided in the folder **“menthol_ML_dJ-DP4”**.
