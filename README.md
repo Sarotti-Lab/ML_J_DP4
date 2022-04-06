@@ -109,13 +109,13 @@ This approach involves removing unsuitable conformations that are incompatible w
 
 Once removed the unsuitable conformations, the remaining conformations are submitted to GIAO NMR calculations at the RHF/STO-3G level with the pop=nbo option. The resulting output files are given in the folder **“menthol_ML_iJ-dJ-DP4”**. It is important to note that in this method, the selection of the conformations should be done before running the `ML_JDP4.py script`. The Excel file with the experimental data is the same as in the dJ-DP4 analysis, but leaving out the information of the <sup>3</sup>J<sub>HH</sub> used to guide the conformational sampling. 
 
-![image](https://user-images.githubusercontent.com/101136961/161817542-537ea267-c75d-4b58-81f1-498b7ccdf436.png)
+![iJJota (2)](https://user-images.githubusercontent.com/101182775/162088779-68c544f3-8361-4ce7-819f-93c7183321f2.png)
 
 **J sheet:**
  
 Once the script is run (in the same way discussed above), the resulting excel report file **“Results_ML_J_DP4” will be generated**. The output Excel file is provided in the folder *“menthol_ML_iJ-dJ-DP4”*.
 
-![image](https://user-images.githubusercontent.com/101136961/161817581-b71c7b3e-d64f-491d-aa15-265886e58677.png)
+![iJdp4 (2)](https://user-images.githubusercontent.com/101182775/162088878-4d97c35c-305b-4d2d-b14c-c5a6fc9d430c.png)
 
 **DP4 sheet:**
  
