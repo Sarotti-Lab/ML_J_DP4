@@ -47,9 +47,9 @@ To run ML_JDP4 it is required that the information is located in a folder contai
 ![image](https://user-images.githubusercontent.com/101136961/161283203-35f3f2df-e6a3-43d4-b8b4-87eb0c7bca18.png)
 
 
-**3) The Eutput excel file:** once the ML-J-DP4.py is executed, a filed named *‘Results_ML_J_DP4.xlsx’* is created in the same folder. The file contains five sheets:
+**3) The Output excel file:** once the ML_JDP4.py is executed, a filed named *‘Results_ML_J_DP4.xlsx’* is created in the same folder containing the Gaussian output files and the Excel input file. The Excel output file contains five sheets: 
 
-**DP4 sheet:**  tthe DP4 probabilities are shown for each isomer considering the information of H, C and J individually or altogether. Although the high accuracy in the ML predictions, it must be emphasized that some environments might not be correctly reproduced leading to large unscaled errors that would affect the scaling procedure and the concomitant J-DP4 values. Hence, to avoid potential misassignments, a sheet containing the unscaled shifts and errors are printed. In this scenario, it is advisable to recompute J-DP4 after removing or revising the conflicting signal.
+**DP4 sheet:**  the DP4 probabilities are shown for each isomer considering the information of H, C and J individually, and altogether. Although the high accuracy in the ML predictions, it must be emphasized that some environments might not be correctly reproduced leading to large unscaled errors that would affect the scaling procedure and the concomitant J-DP4 values. Hence, to avoid potential misassignments, two sheets containing the unscaled shifts and the corresponding errors are printed. In this scenario, it is advisable to recompute J-DP4 after removing or revising the conflicting signal.
 
 ![figura_dp4](https://user-images.githubusercontent.com/101136961/161762018-4b82f429-bfba-4b7a-ae08-8a9d8041d3dc.JPG)
 
