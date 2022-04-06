@@ -55,19 +55,19 @@ To run ML_JDP4 it is required that the information is located in a folder contai
 
 **Unscaled Chemical Shifts sheet:** this sheet is labeled as *“Shifts_Unsc”*, and displays the experimental chemical shifts (<sup>13</sup>C and <sup>1</sup>H) and the coupling constants (<sup>3</sup>J), in that order, along with the predicted Boltzmann-averaged unscaled values computed for each isomer.
 
-![figura_Unsc](https://user-images.githubusercontent.com/101136961/161763338-f418d39b-4bfb-4469-9429-b7a0d4166b7b.JPG)
+![unsc](https://user-images.githubusercontent.com/101182775/162080256-50f92f90-7d89-4ecf-8c9d-2bd405b456d5.png)
 
 **Scaled Chemical Shifts sheet:** this sheet is labeled as *“Shifts”*, and displays the experimental chemical shifts (<sup>13</sup>C and <sup>1</sup>H) and the coupling constants (<sup>3</sup>J), in that order, along with the corresponding scaled values after for each isomer. The scaling procedure is done according to deltas = (deltau − b)/m, where m and b are the slope and intercept, respectively, resulting from a linear regression calculation on a plot of u against exp.
 
-![figura_shifts](https://user-images.githubusercontent.com/101136961/161764360-20ec494b-f4ea-4dae-a8c8-5d566fbd710c.JPG)
+![sc](https://user-images.githubusercontent.com/101182775/162080321-678e630b-ed2d-44be-b0a7-d9313a3f296e.png)
 
 **Unscaled Errors sheet:** this sheet is labeled as *“Unsc_Errors”*, and displays the differences (absolute value) between unscaled and experimental chemical shifts and coupling constants. It is necessary to check this sheet to verify the absence of large outliers that could affect the assignment. In case all isomers display alarmingly high errors for a given nucleous, it would be advisable to re-compute J-DP4 after removing or revising the conflicting signal. 
 
-![figura_UnsError](https://user-images.githubusercontent.com/101136961/161769513-056d7800-9052-4aa0-9de6-cc021beafc3f.JPG)
+![unErr](https://user-images.githubusercontent.com/101182775/162080373-90b639d9-c309-4e47-966c-cdda836836e8.png)
 
 **Errors sheet:** it displays the differences (absolute value) between scaled and experimental chemical shifts and coupling constants. 
 
-![figura_errors](https://user-images.githubusercontent.com/101136961/161770080-f0033838-f1ac-4459-a64f-e19aecd08dc7.JPG)
+![ScErr](https://user-images.githubusercontent.com/101182775/162080396-15ba6550-044b-4666-a0dd-1d7891fcbb59.png)
 
 # Case study: (-)-Menthol
 
