@@ -74,13 +74,11 @@ To run ML_JDP4 it is required that the information is located in a folder contai
 In order to illustrate the ML-dJ-DP4 and the ML-iJ/dJ-DP4 workflows, we present the analysis of (-)-menthol following these two approaches. As indicated in the Figure 1, there are four possible diastereoisomers. 
  
 ![menthol](https://user-images.githubusercontent.com/101182775/162082954-d6a71d19-8e3d-4520-91d2-edc0104c8729.jpg)
-
 **Figure 1**
 
 Following the recommended computational procedure, a total number of 123 conformers were found at the MMFF force field. Each structure was submitted to NMR calcualtions at the RHF/STO-3G level (with the pop=nbo option). The corresponding output files are provided in the Folder **“menthol_ML_dJ-DP4”**. According to Gaussian numbering scheme, the labels corresponding to each nuclei are given in Figure 2. 
 
 ![menthol-numeracion](https://user-images.githubusercontent.com/101182775/162085447-f6a68302-acd4-4545-9b9e-e1e370971017.jpg)
-
 **Figure 2.** Carbon labels, and proton lavels (in parenthesis). 
 
 ## ML-dJ-DP4
