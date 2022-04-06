@@ -73,7 +73,7 @@ To run ML_JDP4 it is required that the information is located in a folder contai
 
 In order to illustrate the ML-dJ-DP4 and the ML-iJ/dJ-DP4 workflows, we present the analysis of (-)-menthol following these two approaches. As indicated in the Figure 1, there are four possible diastereoisomers. 
  
- ![mentol_1](https://user-images.githubusercontent.com/101136961/161816781-85c9528c-3053-447b-b773-f7eed058f5d9.JPG)
+![menthol](https://user-images.githubusercontent.com/101182775/162082954-d6a71d19-8e3d-4520-91d2-edc0104c8729.jpg)
 
 **Figure 1**
 
