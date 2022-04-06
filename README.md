@@ -49,17 +49,21 @@ To run ML_JDP4 it is required that the information is located in a folder contai
 
 **3) The Output excel file:** once the ML_JDP4.py is executed, a filed named *‘Results_ML_J_DP4.xlsx’* is created in the same folder containing the Gaussian output files and the Excel input file. The Excel output file contains five sheets: 
 
+
 **DP4 sheet:**  the DP4 probabilities are shown for each isomer considering the information of H, C and J individually, and altogether. Although the high accuracy in the ML predictions, it must be emphasized that some environments might not be correctly reproduced leading to large unscaled errors that would affect the scaling procedure and the concomitant J-DP4 values. Hence, to avoid potential misassignments, the following sheets contain information regrding the scaled and unscaled chemical shifts, and the corresponding errors (differences with the experimental values). In case all isomers display alarmingly high errors for a given nucleous, it would be advisable to re-compute J-DP4 after removing or revising the conflicting signal. 
 
 ![dp4](https://user-images.githubusercontent.com/101182775/162080130-6fe10393-efaf-4871-b2df-2b1516adc063.png)
+
 
 **Unscaled Chemical Shifts sheet:** this sheet is labeled as *“Shifts_Unsc”*, and displays the experimental chemical shifts (<sup>13</sup>C and <sup>1</sup>H) and the coupling constants (<sup>3</sup>J), in that order, along with the predicted Boltzmann-averaged unscaled values computed for each isomer.
 
 ![unsc](https://user-images.githubusercontent.com/101182775/162080256-50f92f90-7d89-4ecf-8c9d-2bd405b456d5.png)
 
+
 **Scaled Chemical Shifts sheet:** this sheet is labeled as *“Shifts”*, and displays the experimental chemical shifts (<sup>13</sup>C and <sup>1</sup>H) and the coupling constants (<sup>3</sup>J), in that order, along with the corresponding scaled values after for each isomer. The scaling procedure is done according to deltas = (deltau − b)/m, where m and b are the slope and intercept, respectively, resulting from a linear regression calculation on a plot of u against exp.
 
 ![sc](https://user-images.githubusercontent.com/101182775/162080321-678e630b-ed2d-44be-b0a7-d9313a3f296e.png)
+
 
 **Unscaled Errors sheet:** this sheet is labeled as *“Unsc_Errors”*, and displays the differences (absolute value) between unscaled and experimental chemical shifts and coupling constants. It is necessary to check this sheet to verify the absence of large outliers that could affect the assignment. In case all isomers display alarmingly high errors for a given nucleous, it would be advisable to re-compute J-DP4 after removing or revising the conflicting signal. 
 
@@ -109,15 +113,17 @@ This approach involves removing unsuitable conformations that are incompatible w
 
 Once removed the unsuitable conformations, the remaining conformations are submitted to GIAO NMR calculations at the RHF/STO-3G level with the pop=nbo option. The resulting output files are given in the folder **“menthol_ML_iJ-dJ-DP4”**. It is important to note that in this method, the selection of the conformations should be done before running the `ML_JDP4.py script`. The Excel file with the experimental data is the same as in the dJ-DP4 analysis, but leaving out the information of the <sup>3</sup>J<sub>HH</sub> used to guide the conformational sampling. 
 
+**J sheet:**
+
 ![iJJota (2)](https://user-images.githubusercontent.com/101182775/162088779-68c544f3-8361-4ce7-819f-93c7183321f2.png)
 
-**J sheet:**
- 
 Once the script is run (in the same way discussed above), the resulting excel report file **“Results_ML_J_DP4” will be generated**. The output Excel file is provided in the folder *“menthol_ML_iJ-dJ-DP4”*.
+
+**DP4 sheet:**
 
 ![iJdp4 (2)](https://user-images.githubusercontent.com/101182775/162088878-4d97c35c-305b-4d2d-b14c-c5a6fc9d430c.png)
 
-**DP4 sheet:**
+
  
 
 
