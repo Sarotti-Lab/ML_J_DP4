@@ -51,6 +51,9 @@ To run ML_JDP4 it is required that the information is located in a folder contai
 
 **DP4 sheet:**  the DP4 probabilities are shown for each isomer considering the information of H, C and J individually, and altogether. Although the high accuracy in the ML predictions, it must be emphasized that some environments might not be correctly reproduced leading to large unscaled errors that would affect the scaling procedure and the concomitant J-DP4 values. Hence, to avoid potential misassignments, the following sheets contain information regrding the scaled and unscaled chemical shifts, and the corresponding errors (differences with the experimental values). In case all isomers display alarmingly high errors for a given nucleous, it would be advisable to re-compute J-DP4 after removing or revising the conflicting signal. 
 
+![RM1](https://user-images.githubusercontent.com/101182775/162076916-458fc1df-f8fd-43b9-acae-1ac6e588c2df.png)
+
+
 ![figura_dp4](https://user-images.githubusercontent.com/101136961/161762018-4b82f429-bfba-4b7a-ae08-8a9d8041d3dc.JPG)
 
 **Unscaled Chemical Shifts sheet:** this sheet is labeled as *“Shifts_Unsc”*, and displays the experimental chemical shifts (<sup>13</sup>C and <sup>1</sup>H) and the coupling constants (<sup>3</sup>J), in that order, along with the predicted Boltzmann-averaged unscaled values computed for each isomer.
