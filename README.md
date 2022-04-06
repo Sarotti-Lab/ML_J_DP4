@@ -2,34 +2,39 @@
 
 ## An integrated quantum mechanics-machine learning approach for ultra-fast NMR structural elucidation
 
-Authors: Ariel M. Sarotti & María M. Zanardi 
+This repository contains all codes and data required to run ML-J-DP4 calculations. 
 
-Usage: `ml_jdp4` 
+### Description
+ML-J-DP4 is a machine learning-based Python program to compute the ML-J-DP4 probabilities using the GIAO NMR calculations conduced at the RHF/STO-3G//MMFF level as input. The script feeds on the Gaussian output files (including *.log and *.out extensions), and creates an input matrix by computing different local descriptors from the 3D geometries and NMR/NBO data. The input matrix is transformed into refined chemical shifts using a KRR trained ML. In paralell, the script calculates the 3JHH coupling constants using the HLA formalism. The chemical shifts and coupling constants are Boltzmann averaged, and correlated with the experimental data provided to obtain the ML-J-DP4 probabilities for each candidate isomer. 
 
 ### Installation Requirements
 
-**ML_JDP4.py** needs python 3.8 or later to work. You could install the module by console using:
+**ML_JDP4.py** needs python 3.8 or later to work. The module can be installed by console using:
 `pip3 install ml-jdp4`
+
+Usage: `ml_jdp4`
 
 ### User Guide
 
-You need to create a folder containing the following files: 
+To run ML_JDP4 it is required that the information is located in a folder containing the following files: 
 
-      1. The gaussian outputs of the NMR and NBO calculations (all conformers for all isomers).
+      1. All the Gaussian outputs from the NMR/NBO calculations (all conformers for all isomers). 
       
-      2. The excel file containing the experimental data and the labels of each nucleus associated with each experimental value.
+      2. An Excel file containing the experimental data and the labels of each nucleus associated with each experimental value.
       
  ### Technical requirements
  
-**1) The output files:** must be named following the next convention: number_*.log or .out, where number represent the isomer number and could be from 1 to N where N is the number of candidate structures under study. For instance:
+**1) The output files:** must be named following the next convention: number_*.log or .out, where number identifies the ith isomer, ranging from 1 to N (where N is the number of candidate isomers under study). For example: 
  
-       1_NewNatProd_c01.log (Conformer 1 for isomer 1 of the compound names NewNatProd)
+       1_NewNatProd_c01.log (Conformer 1 of isomer 1 of a compound named NewNatProd)
 
-       1_NewNatProd_c02.log (Conformer 2 for isomer 1 of the compound names NewNatProd)
+       1_NewNatProd_c02.log (Conformer 2 of isomer 1 of a compound named NewNatProd)
 
-       2_NewNatProd_c01.log (Conformer 1 for isomer 2 of the compound names NewNatProd)
+       2_NewNatProd_c01.log (Conformer 1 of isomer 2 of a compound named NewNatProd)
+       
+       2_NewNatProd_c02.log (Conformer 2 of isomer 2 of a compound named NewNatProd)
 
-*The script allows the use of outputs form Gaussian03, 09 and 16.*
+*The script allows the use of outputs from Gaussian 03, 09 and 16.*
 
 **2) The input excel file:** The experimental data and the labels of the candidate structures must be placed in an excel file following the next rules. The excel file should be constituted by two sheets; one containing the data for the coupling constants (named ‘J’) and the other with the NMR chemical shifts (named ‘shifts’).
 
