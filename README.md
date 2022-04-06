@@ -79,7 +79,7 @@ In order to illustrate the ML-dJ-DP4 and the ML-iJ/dJ-DP4 workflows, we present 
 
 Following the recommended computational procedure, a total number of 123 conformers were found at the MMFF force field. Each structure was submitted to NMR calcualtions at the RHF/STO-3G level (with the pop=nbo option). The corresponding output files are provided in the Folder **“menthol_ML_dJ-DP4”**. According to Gaussian numbering scheme, the labels corresponding to each nuclei are given in Figure 2. 
 
- ![mentol_2](https://user-images.githubusercontent.com/101136961/161816816-7a39a084-1014-4d9d-8465-478f3b0511f0.JPG)
+![menthol-numeracion](https://user-images.githubusercontent.com/101182775/162085447-f6a68302-acd4-4545-9b9e-e1e370971017.jpg)
 
 **Figure 2.** Carbon labels, and proton lavels (in parenthesis). 
 
