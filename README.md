@@ -40,7 +40,7 @@ To run ML_JDP4 it is required that the information is located in a folder contai
 
 **“J” sheet:** the first column *“exp”* contains the experimental <sup>3</sup>J coupling constants. In case of interchangeable values, they should be arranged “upside-down” (that is, the larger value first). The second column *“exchange”* serves to indicate **0** (not interchangeable value) or **1** (experimental data interchangeable with its following value). The third and fourth columns are intended to place the labels of the coupled protons. For cases when there are isomers with different labels, there should be two columns for each isomer as indicated below.  
 
-![image](https://user-images.githubusercontent.com/101136961/161282945-682190b8-2f04-4e53-bcbd-7e54b5dd9908.png){width=50%}
+![image](https://user-images.githubusercontent.com/101136961/161282945-682190b8-2f04-4e53-bcbd-7e54b5dd9908.png)
 
 **“shifts” sheet:** the first column *“nuclei”* contains the identity of the atom ‘c or C’ for <sup>13</sup>C and ‘h or H’ for hydrogen atoms. The second column *“exp_data”* contains the experimental chemical shifts. In case of interchangeable values, they should be arranged *“upside-down”* (that is, the larger value first). The third column *“exchange”* serves to indicate **0** (not interchangeable value) or **1** (experimental data interchangeable with its following value). The following columns are intended to place the labels of the nuclei associated to the corresponding chemical shift. If 2 or more values are added in that region, the isotropic shielding values will be averaged (as in the case of methyl groups or equivalent methylene groups). For cases when there are isomers with different labels, there should be three columns for each isomer as indicated below.
 
