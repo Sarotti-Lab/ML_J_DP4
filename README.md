@@ -103,7 +103,7 @@ Once installed, the script is run through the console as `ml_jdp4`. A pop-up win
 
 This approach involves removing unsuitable conformations that are incompatible with selected experimental <sup>3</sup>J<sub>HH</sub> values. In this case, we selected the J<sub>16,19</sub>= 10 Hz to constrain the sampling, leading to 34 conformations.
 
-![mentol_3](https://user-images.githubusercontent.com/101136961/161817451-1b4a3759-b336-480e-b6f7-e3ec8d4485a4.JPG)
+![mentholRemove](https://user-images.githubusercontent.com/101182775/162088111-620e4fd3-ea72-4adf-9860-0ba770069aae.jpg)
  
 **Figure 3.** J<sub>16,19</sub> (10 Hz) was chosen to constrain the conformations
 
