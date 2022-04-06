@@ -97,7 +97,7 @@ Once installed, the script is run through the console as `ml_jdp4`. A pop-up win
 
 **DP4 sheet:**
 
-![image](https://user-images.githubusercontent.com/101136961/161816993-3d57ca86-2d45-4348-9387-96f2e3c5fd32.png)
+![dp4](https://user-images.githubusercontent.com/101182775/162087380-d2445cec-3e2c-4ec6-a206-e402060628fe.png)
 
 ## ML-iJ/dJ-DP4
 
