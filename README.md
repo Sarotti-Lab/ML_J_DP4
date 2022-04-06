@@ -55,6 +55,7 @@ To run ML_JDP4 it is required that the information is located in a folder contai
 
 ![RM1](https://user-images.githubusercontent.com/101182775/162077274-402c63f0-7d6f-48a8-8029-2a7ca1955fce.png)
 
+![RM1 - copia (2)](https://user-images.githubusercontent.com/101182775/162078842-1782a5c9-21ad-49a9-8f82-54bda3207c4f.png)
 
 
 ![figura_dp4](https://user-images.githubusercontent.com/101136961/161762018-4b82f429-bfba-4b7a-ae08-8a9d8041d3dc.JPG)
