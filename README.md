@@ -87,7 +87,7 @@ The input excel file required for running the ML_JDP4.py script must be filled a
 
 **J sheet**
 
-![Jdir (2)](https://user-images.githubusercontent.com/101182775/162086472-805f9ef1-9cef-4d5a-bfa2-c8a845079120.png)
+![Jdir (2)](https://user-images.githubusercontent.com/101182775/162087115-c72f178b-2cfe-4b12-8694-1e47e4e49ca8.png)
 
 **Shifts sheet**
 
