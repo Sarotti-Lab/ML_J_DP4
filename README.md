@@ -1,5 +1,7 @@
 # ML_JDP4 Package
 
+\delta
+
 ## An integrated quantum mechanics-machine learning approach for ultra-fast NMR structural elucidation
 
 This repository contains all codes and data required to run ML-J-DP4 calculations. 
@@ -124,6 +126,6 @@ Once the script is run (in the same way discussed above), the resulting excel re
 ![iJdp4 (2)](https://user-images.githubusercontent.com/101182775/162088878-4d97c35c-305b-4d2d-b14c-c5a6fc9d430c.png)
 
 
- $\Delta$
+
 
 
