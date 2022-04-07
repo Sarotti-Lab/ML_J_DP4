@@ -1,10 +1,5 @@
 # ML_JDP4 Package
 
-\delta
-
-
-U+0394
-
 ## An integrated quantum mechanics-machine learning approach for ultra-fast NMR structural elucidation
 
 This repository contains all codes and data required to run ML-J-DP4 calculations. 
@@ -65,7 +60,7 @@ To run ML_JDP4 it is required that the information is located in a folder contai
 ![unsc](https://user-images.githubusercontent.com/101182775/162080256-50f92f90-7d89-4ecf-8c9d-2bd405b456d5.png)
 
 
-**Scaled Chemical Shifts sheet:** this sheet is labeled as *“Shifts”*, and displays the experimental chemical shifts (<sup>13</sup>C and <sup>1</sup>H) and the coupling constants (<sup>3</sup>J), in that order, along with the corresponding scaled values after for each isomer. The scaling procedure is done according to deltas = (deltau − b)/m, where m and b are the slope and intercept, respectively, resulting from a linear regression calculation on a plot of u against exp.
+**Scaled Chemical Shifts sheet:** this sheet is labeled as *“Shifts”*, and displays the experimental chemical shifts (<sup>13</sup>C and <sup>1</sup>H) and the coupling constants (<sup>3</sup>J), in that order, along with the corresponding scaled values after for each isomer. The scaling procedure is done according to δs = (δu − b)/m, where m and b are the slope and intercept, respectively, resulting from a linear regression calculation on a plot of δu against δexp.
 
 ![sc](https://user-images.githubusercontent.com/101182775/162080321-678e630b-ed2d-44be-b0a7-d9313a3f296e.png)
 
