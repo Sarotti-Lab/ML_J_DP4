@@ -2,6 +2,9 @@
 
 \delta
 
+
+U+0394
+
 ## An integrated quantum mechanics-machine learning approach for ultra-fast NMR structural elucidation
 
 This repository contains all codes and data required to run ML-J-DP4 calculations. 
