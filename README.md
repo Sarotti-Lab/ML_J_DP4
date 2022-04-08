@@ -76,7 +76,15 @@ To run ML_JDP4 it is required that the information is located in a folder contai
 
 ![ScErr](https://user-images.githubusercontent.com/101182775/162080396-15ba6550-044b-4666-a0dd-1d7891fcbb59.png)
 
-# Case study: (-)-Menthol
+### General recommendations
+- Despite the ML-JDP4 can handle any amount of isomers, keeping the number of candidates to a minimum has several advantages, as it reduces both the overall computational cost and the probability that the calculated data for an incorrect isomer ends up having better fit with the experimental values than the correct candidate.
+- The conformational search should provide a good description of the conformational landscape of the system under study. Improper computational work might lead to potentially negative consequences in the overall results. Systematic sampling is always recommended, but impractical in highly flexible molecules. In those cases, stochastic searches using a reasonably large number of steps should be carried out. To avoid missing potentially relevant conformations, all conformations within a safe energy window from the corresponding global minimum should be kept. For broad applications, a 5 kcal/mol cutoff value using the MMFF force field. 
+- The conformational removal for iJ/dJ-DP4 calculations can be done in different ways: a) perform a full sampling and then remove the unsuitable conformations following <sup>3</sup>J analysis. b) perform a restricted sampling by freezing (within a safe range) the dihedral angle/s in agreement with the experimental <sup>3</sup>J values. In any case, this conformational restriction must be done prior the use of ML-J-DP4 script (IMPORTANT NOTE: the script does not make J filtration). For more details on this issue, please see: Org. Lett. 2019, 21, 4003 (doi: 10.1021/acs.orglett.9b01193). 
+- The NMR data must be assigned (know which shift corresponds to which nuclei). Using unassigned or misassigned NMR data can lead to erroneous results.
+- The chemical shifts of equivalent nuclei that show fast interconversion should be averaged (such as the case of methyl groups, or some methylene groups). Treating the signal of each individual proton independently is wrong (for example, computing three different chemical shifts for the same methyl group). Another problem arises when dealing with diastereotopic methylene protons, which are ofen arbitrarily correlated. Unless the discrimination of both signals as pro-R and pro-S is made using
+additional NMR information (such as NOE or J coupling), the most convenient way to tackle this issue is to treat them as interchangeable signals. 
+
+## Case study: (-)-Menthol
 
 In order to illustrate the ML-dJ-DP4 and the ML-iJ/dJ-DP4 workflows, we present the analysis of (-)-menthol following these two approaches. As indicated in the Figure 1, there are four possible diastereoisomers. 
  
@@ -88,7 +96,7 @@ Following the recommended computational procedure, a total number of 123 conform
 ![menthol-numeracion](https://user-images.githubusercontent.com/101182775/162085447-f6a68302-acd4-4545-9b9e-e1e370971017.jpg)
 **Figure 2.** Carbon labels, and proton lavels (in parenthesis). 
 
-## ML-dJ-DP4
+### ML-dJ-DP4
 
 The input Excel file required for running the ML_JDP4.py script must be filled as follows. The Excel file is also provided in the folder *“menthol_ML_dJ-DP4”*.
 
@@ -106,7 +114,7 @@ Once installed, the script is run through the console as `ml_jdp4`. A pop-up win
 
 ![dp4](https://user-images.githubusercontent.com/101182775/162087380-d2445cec-3e2c-4ec6-a206-e402060628fe.png)
 
-## ML-iJ/dJ-DP4
+### ML-iJ/dJ-DP4
 
 This approach involves removing unsuitable conformations that are incompatible with selected experimental <sup>3</sup>J<sub>HH</sub> values. In this case, we selected the J<sub>16,19</sub>= 10 Hz to constrain the sampling, leading to 34 conformations.
 
