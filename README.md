@@ -2,12 +2,12 @@
 
 ## An integrated quantum mechanics-machine learning approach for ultra-fast NMR structural elucidation
 
-![GA](https://user-images.githubusercontent.com/101182775/162478494-d9d52f2a-65f4-4b30-97b1-8922bd877c54.png)
+![GA](https://user-images.githubusercontent.com/101182775/162481272-d5df790a-b421-4484-a2a8-80bd81d154c2.png)
 
 This repository contains all codes and data required to run ML-J-DP4 calculations. 
 
 ### Description
-ML-J-DP4 is a machine learning-based Python program to compute the ML-J-DP4 probabilities using the GIAO NMR calculations conduced at the RHF/STO-3G//MMFF level as input. The script feeds on the Gaussian output files (including *.log and *.out extensions), and creates an input matrix by computing different local descriptors from the 3D geometries and NMR/NBO data. The input matrix is transformed into refined chemical shifts using a KRR trained ML. In paralell, the script calculates the 3JHH coupling constants using the HLA formalism. The chemical shifts and coupling constants are Boltzmann averaged, and correlated with the experimental data provided to obtain the ML-J-DP4 probabilities for each candidate isomer. 
+ML-JDP4 is a machine learning-based Python program to compute the ML-J-DP4 probabilities using the GIAO NMR calculations conduced at the RHF/STO-3G//MMFF level as input. The script feeds on the Gaussian output files (including *.log and *.out extensions), and creates an input matrix by computing different local descriptors from the 3D geometries and NMR/NBO data. The input matrix is transformed into refined chemical shifts using a KRR trained ML. In paralell, the script calculates the <sup>3</sup>J<sub>HH</sub> coupling constants using the HLA formalism. The chemical shifts and coupling constants are Boltzmann averaged, and correlated with the experimental data provided to obtain the ML-J-DP4 probabilities for each candidate isomer. 
 
 ### Installation Requirements
 
@@ -24,9 +24,7 @@ To run ML_JDP4 it is required that the information is located in a folder contai
       
       2. An Excel file containing the experimental data and the labels of each nucleus associated with each experimental value.
       
- ### Technical requirements
- 
-**1) The output files:** must be named following the following convention: number_*.log or .out, where number identifies the ith isomer, ranging from 1 to N (where N is the number of candidate isomers under study). For example: 
+**1) The output files:** must be named following this convention: number_*.log or .out, where number identifies the i<sup>th</sup> isomer, ranging from 1 to N (where N is the number of candidate isomers under study). For example: 
  
        1_NewNatProd_c01.log (Conformer 1 of isomer 1 of a compound named NewNatProd)
 
@@ -36,20 +34,23 @@ To run ML_JDP4 it is required that the information is located in a folder contai
        
        2_NewNatProd_c02.log (Conformer 2 of isomer 2 of a compound named NewNatProd)
 
-*The script allows the use of outputs from Gaussian 03, 09 and 16.*
+*The script handles outputs from Gaussian 03, 09 and 16.*
 
-**2) The input Excel file:** The experimental data and the labels of the candidate structures must be provided in an Excel file which must be made according the following rules. The Excel file should be constituted by two sheets; one containing the data for the coupling constants (named ‘J’) and the other with the NMR chemical shifts (named ‘shifts’).
+**2) The input Excel file:** The experimental data and the labels of the candidate structures must be provided in an Excel file which must be made as follows. The Excel file contains two sheets; one containing the data for the coupling constants (named ‘J’) and the other with the NMR chemical shifts (named ‘shifts’). A template can be found in the examples provided in the Data section. 
 
-**“J” sheet:** the first column *“exp”* contains the experimental <sup>3</sup>J coupling constants. In case of interchangeable values, they should be arranged “upside-down” (that is, the larger value first). The second column *“exchange”* serves to indicate **0** (not interchangeable value) or **1** (experimental data interchangeable with its following value). The third and fourth columns are intended to place the labels of the coupled protons. For cases when there are isomers with different labels, there should be two columns for each isomer as indicated below.  
+**“J” sheet:** the first column *“exp”* contains the experimental <sup>3</sup>J coupling constants. In case of interchangeable values, they should be arranged “upside-down” (that is, the larger value first). The second column *“exchange”* serves to indicate **0** (not interchangeable value) or **1** (experimental data interchangeable with its following value). The third and fourth columns are intended to place the labels of the coupled protons. If the isomers under study have different labeling schemes (as in the case of constitutional isomers), two colums for each isomer should be provied as indicated below.   
+
+* **Important:** the <sup>3</sup>J<sub>HH</sub> values are calculated using the general Haasnoot-de Leeuw-Altona (HLA) equation, that is defined for tackle coupling between vicinal protons attached to sp<sup>3</sup>-hybridized carbons. Therefore, in the J sheet must not be included other type of homonuclear proton coupling (such as vinilyc, allylic,  homoallylic or any other type of long-range coupling).
 
 ![image](https://user-images.githubusercontent.com/101136961/161282945-682190b8-2f04-4e53-bcbd-7e54b5dd9908.png)
 
-**“shifts” sheet:** the first column *“nuclei”* contains the identity of the atom ‘c or C’ for <sup>13</sup>C and ‘h or H’ for hydrogen atoms. The second column *“exp_data”* contains the experimental chemical shifts. In case of interchangeable values, they should be arranged *“upside-down”* (that is, the larger value first). The third column *“exchange”* serves to indicate **0** (not interchangeable value) or **1** (experimental data interchangeable with its following value). The following columns are intended to place the labels of the nuclei associated to the corresponding chemical shift. If 2 or more values are added in that region, the isotropic shielding values will be averaged (as in the case of methyl groups or equivalent methylene groups). For cases when there are isomers with different labels, there should be three columns for each isomer as indicated below.
+**“shifts” sheet:** the first column *“nuclei”* contains the identity of the atom ‘c or C’ for <sup>13</sup>C and ‘h or H’ for hydrogen atoms. The second column *“exp_data”* contains the experimental chemical shifts. In case of interchangeable values, they should be arranged *“upside-down”* (that is, the larger value first). The third column *“exchange”* serves to indicate **0** (not interchangeable value) or **1** (experimental data interchangeable with its following value). The following columns are intended to place the labels of the nuclei associated to the corresponding chemical shift. If 2 or more values are added in the same row, the isotropic shielding values will be averaged (as in the case of methyl groups or equivalent methylene groups). If the isomers under study have different labeling schemes (as in the case of constitutional isomers), three colums for each isomer should be provied as indicated below.   
 
 ![image](https://user-images.githubusercontent.com/101136961/161283203-35f3f2df-e6a3-43d4-b8b4-87eb0c7bca18.png)
 
+* **Important:** the ML was trained using a set of natural products containing only first row atoms. Therefore, the inclusion of other chemical environments might cause large errors in the resulting chemical shifts. It is then recommended not to include those conflicting resonances in the "shifts" sheet. 
 
-**3) The Output excel file:** once the ML_JDP4.py is executed, a filed named *‘Results_ML_J_DP4.xlsx’* is created in the same folder containing the Gaussian output files and the Excel input file. The Excel output file contains five sheets: 
+**3) The output Excel file:** once the ML_JDP4.py is executed, a filed named *‘Results_ML_J_DP4.xlsx’* is created in the same folder containing the Gaussian output files and the Excel input file. The Excel output file contains five sheets: 
 
 
 **DP4 sheet:**  the DP4 probabilities are shown for each isomer considering the information of H, C and J individually, and altogether. Although the high accuracy in the ML predictions, it must be emphasized that some environments might not be correctly reproduced leading to large unscaled errors that would affect the scaling procedure and the concomitant J-DP4 values. Hence, to avoid potential misassignments, the following sheets contain information regrding the scaled and unscaled chemical shifts, and the corresponding errors (differences with the experimental values). In case all isomers display alarmingly high errors for a given nucleous, it would be advisable to re-compute J-DP4 after removing or revising the conflicting signal. 
@@ -89,7 +90,7 @@ Following the recommended computational procedure, a total number of 123 conform
 
 ## ML-dJ-DP4
 
-The input excel file required for running the ML_JDP4.py script must be filled as follows. The Excel file is also provided in the folder *“menthol_ML_dJ-DP4”*.
+The input Excel file required for running the ML_JDP4.py script must be filled as follows. The Excel file is also provided in the folder *“menthol_ML_dJ-DP4”*.
 
 **J sheet**
 
