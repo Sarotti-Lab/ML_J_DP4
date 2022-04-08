@@ -2,6 +2,8 @@
 
 ## An integrated quantum mechanics-machine learning approach for ultra-fast NMR structural elucidation
 
+![GA](https://user-images.githubusercontent.com/101182775/162478494-d9d52f2a-65f4-4b30-97b1-8922bd877c54.png)
+
 This repository contains all codes and data required to run ML-J-DP4 calculations. 
 
 ### Description
